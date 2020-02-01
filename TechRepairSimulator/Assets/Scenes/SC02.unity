@@ -644,6 +644,7 @@ MonoBehaviour:
     type: 3}
   StartPosition: {x: -6, y: 2, z: -5}
   FlyingStart: {x: -6, y: -5, z: -5}
+  LetterSpeed: 1
 --- !u!4 &1159474052
 Transform:
   m_ObjectHideFlags: 0

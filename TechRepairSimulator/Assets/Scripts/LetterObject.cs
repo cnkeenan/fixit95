@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-enum LetterState
+public enum LetterState
 {
     HIT,
     MISSED,
@@ -14,7 +14,7 @@ public class LetterObject : MonoBehaviour
 {
     public char Letter;
     public Renderer Renderer;
-    private LetterState LetterState = LetterState.NEUTRAL;
+    public LetterState LetterState = LetterState.NEUTRAL;
     public BoxCollider2D Collider;
     private SpriteRenderer SpriteRenderer;
     public MovingLetter Target;
@@ -55,9 +55,18 @@ public class LetterObject : MonoBehaviour
 
             if(Input.GetKeyDown(Letter.ToString()))
             {
+                ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
                 LetterState = LetterState.HIT;
                 SpriteRenderer.material.color = new Color(0.0f, 1.0f, 0.0f);
                 Debug.Log(LetterState);
+            }
+            else if(Input.anyKeyDown)
+            {
+                ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
+
+                LetterState = LetterState.MISSED;
+                SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
+
             }
         }
     }
@@ -65,6 +74,8 @@ public class LetterObject : MonoBehaviour
     {
         if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
+            ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
+
             LetterState = LetterState.MISSED;
             SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
             Debug.Log(LetterState);
