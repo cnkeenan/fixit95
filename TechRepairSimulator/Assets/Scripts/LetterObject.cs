@@ -21,6 +21,7 @@ public class LetterObject : MonoBehaviour
     public AudioClip AudioSuccess;
     public AudioClip AudioFailed;
     public Vector2 ColliderBuffer;
+    private bool TargetWithinBounds = false;
 
     private void Awake()
     {
@@ -38,6 +39,17 @@ public class LetterObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(TargetWithinBounds && LetterState == LetterState.NEUTRAL)
+        {
+            if (Input.GetKeyDown(Letter.ToString()))
+            {
+                HandleHit();
+            }
+            else if (Input.anyKeyDown)
+            {
+                HandleMiss();
+            }
+        }
     }
 
     public void SetSprite(Sprite spriteToSet)
@@ -67,27 +79,20 @@ public class LetterObject : MonoBehaviour
         AudioSource.PlayClipAtPoint(AudioFailed, transform.position);
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
+        if (Target != null && other.gameObject == Target.gameObject)
         {
             Grow();
-            // finally, actually perform the scale/translation
-
-            if(Input.GetKeyDown(Letter.ToString()))
-            {
-                HandleHit();
-            }
-            else if(Input.anyKeyDown)
-            {
-                HandleMiss();
-            }
+            TargetWithinBounds = true;
         }
     }
+
     void OnTriggerExit2D(Collider2D other)
     {
         if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
+            TargetWithinBounds = false;
             HandleMiss();
         }
     }
