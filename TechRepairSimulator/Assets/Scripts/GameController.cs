@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     public float upperBound;
     public static bool wasCreated;
     public int completedCalls = 0;
+    
 
     void Start() {
         wasCreated = false;

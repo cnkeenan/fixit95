@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZZD.UnityExtensions;
 
 public class UIInteraction : MonoBehaviour
 {   
@@ -21,6 +22,7 @@ public class UIInteraction : MonoBehaviour
         var trash = GameObject.Find("Recycle");
         var mycomp = GameObject.Find("MyComp");
         var start = GameObject.Find("Start");
+        var menu = this.transform.parent.gameObject.FindObject("StartMenu"); // hacky bs
 
         if (briefcase == this.gameObject) {
             trash.GetComponent<Animator>().SetBool("Clicked", false);
@@ -44,6 +46,7 @@ public class UIInteraction : MonoBehaviour
             trash.GetComponent<Animator>().SetBool("Clicked", false);
             briefcase.GetComponent<Animator>().SetBool("Clicked", false);
             mycomp.GetComponent<Animator>().SetBool("Clicked", false);
+            if (!menu.active) {menu.SetActive(true);} else {menu.SetActive(false);}
         }
     }
 }

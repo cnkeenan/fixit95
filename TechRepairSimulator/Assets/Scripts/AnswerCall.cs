@@ -1,28 +1,48 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Narrate;
 
 public class AnswerCall : MonoBehaviour
 {
     public AudioClip callStarted;
-    Narrate.Narration narration = new Narrate.Narration();
-
-    void Start() {
+    Narration narration = new Narration();
+    JsonDialog scenarios = new JsonDialog();
+    void Start()
+    {
+        var jsonPath = Resources.Load<TextAsset>("Dialog/dialog");
+        scenarios = JsonUtility.FromJson<JsonDialog>(jsonPath.text);
         CreateNarration();
     }
 
-    void OnMouseDown() {
+    void OnMouseDown()
+    {
         Debug.Log("Call Answered - Scene Transition Needed");
-        AudioSource.PlayClipAtPoint(callStarted, transform.position);
-        Narrate.NarrationManager.instance.PlayNarration(narration);
-        gameObject.SetActive(false);
+        AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
+        audiosource.clip = callStarted;
+        GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Incoming", false);
+        GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Hold", true);
+        NarrationManager.instance.PlayNarration(narration);
+        audiosource.Play();
     }
 
-    void CreateNarration() {
-        var phrase = new Narrate.Phrase();
-        Narrate.Phrase[] phrases= new Narrate.Phrase[1];
-        phrase.text = "Hello";
-        phrases[0] = phrase;
-        narration.phrases = phrases;
+    void CreateNarration()
+    {
+        List<Phrase> phrases = new List<Phrase>();
+
+        for (int i = 0; i < scenarios.Scenarios.Length; i++)
+        {
+            Phrase phrase = new Phrase();
+            if (scenarios.Scenarios[i].Contains("**PRESS"))
+            {
+                phrase.text = scenarios.Scenarios[i];
+                phrases.Add(phrase);
+                break;
+            }
+            phrase.text = scenarios.Scenarios[i];
+            phrases.Add(phrase);
+        }
+
+        narration.phrases = phrases.ToArray();
     }
 }
