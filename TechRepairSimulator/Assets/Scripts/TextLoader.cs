@@ -62,13 +62,14 @@ public class TextLoader : MonoBehaviour
         {
             Flyers[SendIt].StartMoving(LetterSpeed);
             SendIt++;
-            TimeLeft = 1.0f;
+            TimeLeft = UnityEngine.Random.Range(MinLetterSpawn, MaxLetterSpawn);
         }
 
         if(Prompt.Count > 0 && Prompt[Prompt.Count - 1].LetterState != LetterState.NEUTRAL)
         {
             ResetPromptsAndGetScore();
-            CurrentPrompt++;
+            CurrentPrompt++; 
+
 
             if (CurrentPrompt < TestStrings.Length)
             {
@@ -102,7 +103,10 @@ public class TextLoader : MonoBehaviour
         Prompt.Clear();
         foreach(var item in Flyers)
         {
-            Destroy(item.gameObject);
+            if (item != null)
+            {
+                Destroy(item.gameObject);
+            }
         }
         CurrentScore += (success * ScoreMultiplier);
         float percentageCorrect = (float)success / total;

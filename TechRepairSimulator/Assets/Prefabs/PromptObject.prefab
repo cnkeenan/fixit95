@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7387660237826534165}
   - component: {fileID: 6033272746367907957}
   m_Layer: 0
-  m_Name: TextObject
+  m_Name: PromptObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Letter: 0
   Renderer: {fileID: 0}
+  LetterState: 2
+  Collider: {fileID: 0}
+  Target: {fileID: 0}
+  AudioSuccess: {fileID: 8300000, guid: 7f58ad0e98485a6439035572f35592d1, type: 3}
+  AudioFailed: {fileID: 8300000, guid: c99188ea8b01ee948942f3256ac132bc, type: 3}
+  ColliderBuffer: {x: 0, y: 0.2}
 --- !u!212 &7387660237826534165
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -18,6 +18,9 @@ public class LetterObject : MonoBehaviour
     public BoxCollider2D Collider;
     private SpriteRenderer SpriteRenderer;
     public MovingLetter Target;
+    public AudioClip AudioSuccess;
+    public AudioClip AudioFailed;
+    public Vector2 ColliderBuffer;
 
     private void Awake()
     {
@@ -42,31 +45,42 @@ public class LetterObject : MonoBehaviour
         SpriteRenderer.sprite = spriteToSet;
 
         Collider.size = spriteToSet.bounds.size;
+        Collider.size += ColliderBuffer;
         Collider.offset = (spriteToSet.bounds.size * 0.5f) + spriteToSet.bounds.min;
+    }
+
+    public void HandleHit()
+    {
+        Shrink();
+        Destroy(Target.gameObject);
+        LetterState = LetterState.HIT;
+        SpriteRenderer.material.color = new Color(0.0f, 1.0f, 0.0f);
+        AudioSource.PlayClipAtPoint(AudioSuccess, transform.position);
+    }
+
+    public void HandleMiss()
+    {
+        Shrink();
+        Destroy(Target.gameObject);
+        LetterState = LetterState.MISSED;
+        SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
+        AudioSource.PlayClipAtPoint(AudioFailed, transform.position);
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
-            ScaleAround(Target.gameObject, Target.transform.position + (SpriteRenderer.sprite.bounds.size*0.5f), new Vector3(2.0f, 2.0f, 2.0f));
-
+            Grow();
             // finally, actually perform the scale/translation
 
             if(Input.GetKeyDown(Letter.ToString()))
             {
-                ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
-                LetterState = LetterState.HIT;
-                SpriteRenderer.material.color = new Color(0.0f, 1.0f, 0.0f);
-                Debug.Log(LetterState);
+                HandleHit();
             }
             else if(Input.anyKeyDown)
             {
-                ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
-
-                LetterState = LetterState.MISSED;
-                SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
-
+                HandleMiss();
             }
         }
     }
@@ -74,11 +88,7 @@ public class LetterObject : MonoBehaviour
     {
         if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
-            ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
-
-            LetterState = LetterState.MISSED;
-            SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
-            Debug.Log(LetterState);
+            HandleMiss();
         }
     }
 
@@ -97,5 +107,15 @@ public class LetterObject : MonoBehaviour
         // finally, actually perform the scale/translation
         target.transform.localScale = newScale;
         target.transform.localPosition = FP;
+    }
+
+    public void Shrink()
+    {
+        ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(1.0f, 1.0f, 1.0f));
+    }
+
+    public void Grow()
+    {
+        ScaleAround(Target.gameObject, Target.transform.position + (SpriteRenderer.sprite.bounds.size * 0.5f), new Vector3(2.0f, 2.0f, 2.0f));
     }
 }
