@@ -21,7 +21,7 @@ public class LetterObject : MonoBehaviour
 
     private void Awake()
     {
-        transform.localScale = new Vector2(2, 2);
+        transform.localScale = new Vector2(1, 1);
         Renderer = GetComponent<Renderer>();
         Collider = GetComponent<BoxCollider2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,7 +49,7 @@ public class LetterObject : MonoBehaviour
     {
         if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
-            ScaleAround(Target.gameObject, Target.transform.position + SpriteRenderer.sprite.bounds.size, new Vector3(3.0f, 3.0f, 3.0f));
+            ScaleAround(Target.gameObject, Target.transform.position + (SpriteRenderer.sprite.bounds.size*0.5f), new Vector3(2.0f, 2.0f, 2.0f));
 
             // finally, actually perform the scale/translation
 

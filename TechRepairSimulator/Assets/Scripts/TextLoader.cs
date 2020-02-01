@@ -7,7 +7,7 @@ public class TextLoader : MonoBehaviour
 {
     public LetterObject LetterPrefab;
     public MovingLetter MovingPrefab;
-    private static string testString = "www.googlepqpqpq.com";
+    private static string testString = "www.google.com";
     List<LetterObject> Prompt = new List<LetterObject>();
     List<MovingLetter> Flyers = new List<MovingLetter>();
     public Vector3 StartPosition;

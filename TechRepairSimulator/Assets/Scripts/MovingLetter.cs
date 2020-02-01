@@ -12,7 +12,7 @@ public class MovingLetter : MonoBehaviour
 
     private void Awake()
     {
-        transform.localScale = new Vector2(2, 2);
+        transform.localScale = new Vector2(1, 1);
         Renderer = GetComponent<Renderer>();
         Collider = GetComponent<BoxCollider2D>();
     }
