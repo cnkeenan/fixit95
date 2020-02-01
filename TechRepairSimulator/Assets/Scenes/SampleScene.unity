@@ -149,9 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10682b91e89514598bff7a15648d30f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPrefab: {fileID: 7240082551078225237, guid: 33d95f1fc0ecd42c3b959ae44e19e9cc,
+  LetterPrefab: {fileID: 7240082551078225237, guid: 33d95f1fc0ecd42c3b959ae44e19e9cc,
     type: 3}
-  StartPosition: {x: -1, y: 1, z: 0}
+  MovingPrefab: {fileID: -7192809880973999218, guid: 41db24121ee6f79488f42412b99c2523,
+    type: 3}
+  StartPosition: {x: -6, y: 4, z: 0}
+  FlyingStart: {x: -6, y: -10, z: 0}
 --- !u!4 &214585828
 Transform:
   m_ObjectHideFlags: 0
