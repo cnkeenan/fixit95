@@ -8,6 +8,7 @@ public class AnswerCall : MonoBehaviour
     public AudioClip callStarted;
     Narration narration = new Narration();
     JsonDialog scenarios = new JsonDialog();
+    public bool answered = false;
     void Start()
     {
         var jsonPath = Resources.Load<TextAsset>("Dialog/dialog");
@@ -17,6 +18,7 @@ public class AnswerCall : MonoBehaviour
 
     void OnMouseDown()
     {
+        answered = true;
         Debug.Log("Call Answered - Scene Transition Needed");
         AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
         audiosource.clip = callStarted;
