@@ -687,6 +687,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2105398282853677028, guid: 97381ab9ae415644984db45ccea26ea6,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 586297791
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105398282853677028, guid: 97381ab9ae415644984db45ccea26ea6,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677030, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_Name
@@ -695,12 +705,12 @@ PrefabInstance:
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7737905
+      value: 4.089
       objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1565337
+      value: -1.054
       objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
@@ -768,7 +778,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.41438365, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -779,7 +789,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.9375}
+  m_Size: {x: 1.1712327, y: 0.9375}
   m_EdgeRadius: 0
 --- !u!1 &1183927669 stripped
 GameObject:
@@ -1067,7 +1077,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110819353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -1.15, z: -2.1396484}
+  m_LocalPosition: {x: 5.15, y: -2.028, z: -2.1396484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1122,9 +1132,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 586297791
+  m_SortingLayer: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 3374684177727009039, guid: 50512f5690b40194788cca510f7740ff,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1241,6 +1251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920292379506281003, guid: f5ec2116b4d089241b1cac77c00c29c2,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ec2116b4d089241b1cac77c00c29c2, type: 3}

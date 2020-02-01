@@ -5,6 +5,7 @@ using UnityEngine;
 public class RattyScript : MonoBehaviour
 {
     Animator anim;
+    private Coroutine wait;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -13,7 +14,10 @@ public class RattyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Wait());
+        if (wait == null)
+        {
+           wait = StartCoroutine(Wait());
+        }
     }
 
     IEnumerator Wait()
@@ -22,10 +26,16 @@ public class RattyScript : MonoBehaviour
         if (anim.GetBool("Sleep"))
         {
             anim.SetBool("Sleep", false);
+            wait = null;
+            yield break;
         }
         else
         {
             anim.SetBool("Sleep", true);
+            wait = null;
+            yield break;
         }
+
+       
     }
 }

@@ -6,5 +6,7 @@ public class StartGame : MonoBehaviour
 {
     void OnMouseDown() {
         SceneManager.LoadScene("SC01");
+
+        gameObject.GetComponent<Animator>().SetBool( "Pressed" , true);
     }
 }
