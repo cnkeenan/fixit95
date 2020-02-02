@@ -63,6 +63,10 @@ public class TextLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            SceneManager.LoadScene("SC01");
+        }
         TimeLeft -= Time.deltaTime;
         if(TimeLeft <= 0.0f && SendIt < Prompt.Count)
         {
@@ -123,8 +127,8 @@ public class TextLoader : MonoBehaviour
         }
         else if(percentageCorrect >= 0.66f)
         {
-            ScoreMultiplier = Math.Min(8.0f, ScoreMultiplier * 2.0f);
-            LetterSpeed = Math.Min(8.0f, LetterSpeed * 2.0f);
+            ScoreMultiplier = Math.Min(options.MaxLetterSpeed, ScoreMultiplier * 2.0f);
+            LetterSpeed = Math.Min(options.MaxLetterSpeed, LetterSpeed * 2.0f);
         }
         Flyers.Clear();
         SendIt = 0;

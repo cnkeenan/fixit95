@@ -21,6 +21,7 @@ public class LetterObject : MonoBehaviour
     public AudioClip AudioSuccess;
     public AudioClip AudioFailed;
     public Vector2 ColliderBuffer;
+    public float ClipVolume;
     private bool TargetWithinBounds = false;
 
     private void Awake()
@@ -67,7 +68,7 @@ public class LetterObject : MonoBehaviour
         Destroy(Target.gameObject);
         LetterState = LetterState.HIT;
         SpriteRenderer.material.color = new Color(0.0f, 1.0f, 0.0f);
-        AudioSource.PlayClipAtPoint(AudioSuccess, transform.position);
+        AudioSource.PlayClipAtPoint(AudioSuccess, transform.position, 1.0f);
     }
 
     public void HandleMiss()
@@ -76,7 +77,7 @@ public class LetterObject : MonoBehaviour
         Destroy(Target.gameObject);
         LetterState = LetterState.MISSED;
         SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
-        AudioSource.PlayClipAtPoint(AudioFailed, transform.position);
+        AudioSource.PlayClipAtPoint(AudioFailed, transform.position, 1.0f);
     }
 
     void OnTriggerEnter2D(Collider2D other)

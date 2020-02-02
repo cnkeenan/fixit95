@@ -400,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.43, y: -75}
+  m_AnchoredPosition: {x: 0, y: -83.8}
   m_SizeDelta: {x: 518.34, y: 284.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &748684003
@@ -553,10 +553,10 @@ RectTransform:
   m_Father: {fileID: 1632802519}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.084991455, y: -17.840027}
-  m_SizeDelta: {x: 0.16998291, y: 35.679993}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -17.96}
+  m_SizeDelta: {x: 800.17, y: 455.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872118356
 MonoBehaviour:
@@ -767,7 +767,7 @@ RectTransform:
   m_GameObject: {fileID: 1632802518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 748684002}
   - {fileID: 872118355}
@@ -777,7 +777,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 954.83, y: 501.32}
+  m_SizeDelta: {x: 800.11, y: 420.09}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1632802520
 MonoBehaviour:
@@ -829,6 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   gameOverPanel: {fileID: 872118356}
+  window: {fileID: 1632802520}
   message: Please come to my office to discuss your pathetic performance!
   loseMessage: Please come to my office to discuss your pathetic performance!
   winMessage: 'Hey Great Job!
@@ -884,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

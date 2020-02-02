@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8641192783990632192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8137137333266173086}
+  - component: {fileID: 7448674405777744940}
+  m_Layer: 5
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8137137333266173086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641192783990632192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.570294, y: -2.3702736, z: -258.2451}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7448674405777744940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8641192783990632192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77aa95c7c7043f84b8e1e707dc6fcf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  gameOverPanel: {fileID: 291253386012499923, guid: db2df2c8aa1000b479cb79bf65a64cdb,
+    type: 3}
+  message: Please come to my office to discuss your pathetic performance!
+  loseMessage: Please come to my office to discuss your pathetic performance!
+  winMessage: 'Hey Great Job!
+
+    (no raise tho)'
+  text: {fileID: 7195281343200487414, guid: b3026ca84cea51544a1d54cdbacf889c, type: 3}
+  gameOverText: {fileID: 7195281343200487414, guid: b3026ca84cea51544a1d54cdbacf889c,
+    type: 3}

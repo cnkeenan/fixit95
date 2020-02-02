@@ -1,16 +1,170 @@
 {
-  "Scenarios": [
-    "Hey, this is....well to be honest, it's none of your gosh darn business...ya, hear?",
-    "I'm sick of your high polluting, rag-tag group of vandals trying to spy on me, YA HEAR?",
-    "What type of operation are you running here for your MISTER Putin, huh?",
-    "That's the problem with you offshoots of Jimmy Carter!",
-    "I REMEMBER RONALD REAGAN! He wouldn't stand around making kissy shacks for these BULLIES!",
-    "I MEAN which Beatle am I talking to right now? All you need is love, huh?",
-    "Well how about..",
-    "**12 minutes later and I don't believe I've said a word**",
-    "Well ANYWAYS, since you're probably typing all this out for yer commie manfests, my boat isn't starting and my wife is angrier than all heck!",
-    "I was shredding my tax returns with my motor and I know somehow the socialist parts of it probably broke it, help me fix this?",
-    "**PRESS THE HOLD BUTTON TO PROCEED**",
-    "Hi! Oh gosh! How do I begin? I'm a little bit scared right now! I'm sitting on quite the pickle and I really really hope you can help! So, like, I'm a wedding photographer on the weekends and I just took photos for the most gorgeous wedding! They were a couple that fell in love after the husband was flying his drone around his neighborhood and somehow his drone landed in the bushes near her bathroom window! This world is so small! So, like, funnily enough a couple years later and it's almost like I fell into a Disney storybook! His drone fell in the bushes near my sorority's bathroom windows! The theme was probably the most relevant thing. Live! Laugh! Love! I mean who knew those words would land so perfectly together. UGH! He would make such a fun face to at the wedding L M A O he would like.... press his chin to his chest, look up and breathe really loudily! Funny! So anyways, I got a virus and it says if I don't pay $80,000, this girl who died at senior prom 400 yrs ago is going to eat my files!!! Can I like write her a nice letter to lower that price a bit?"
-  ]
+	"Items": [{
+			"Scenarios": [
+				"Good afternoon deary, I believe my friend is going a bit kooky and I know this is a computer",
+				"number but my friend is this little purple ape who gives me all these great facts!",
+				"Did you know bananas help you lose weight by smelling them instead of eating them!",
+				"He said that! Never in my 82 yrs did I know that!",
+				"Anyways, I think he's being a bad little monkey right now and I need help reprimanding the youngster.",
+				"I can't work myself up to do it bec6ause he's my little buddy. He keeps making me click different parts",
+				"of his body and wants my credit card! I don't even have a credit card.",
+				"Do you think I should just put some random numbers so I can get some more facts"
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"Bonzi buddy still exists",
+					"Fake credit card numbers",
+					"Bad input hr dont fire me",
+					"Why do old people use tech"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex":0
+		},
+		{
+			"Scenarios": [
+				"Hey bro! So what do you know about TOR? So... I'm definitely not a creep.",
+				"I'm just sick and tired of my privacy being hijacked by these lizard people!",
+				"I just want complete privacy to see whatever, do whatever and buy whatever I want.",
+				"I really am serious though. Never done anything creepy in my life!",
+				"TOR redirects your IP address to another server or something to erase your trails",
+				"... I'm really a good guy though! HELLO! Why are you not saying anything?",
+				"I'm not going to do anything! For all you know I'm just trying to download anime redubs...",
+				"you are probably the creep. You are probably on some weird Russian website trying",
+				"to buy a poster sized version of some obscure 80s album that had to be redesigned",
+				"that you are going to send to your P.O. box so your roommates don't find out!",
+				"I DON'T NEED TO TALK TO CREEPS! I JUST NEED TO GET MY IP TO SET UP THIS STUPID THING NOW! CHOP CHOP!"
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"How dangerous is the deep web",
+					"How can I report a crime",
+					"Is silk road still around",
+					"Chinese food near me"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex":3
+		},
+		{
+			"Scenarios": [
+				"Okay so! This is going to be a super easy call! My name is Jared Valentine, and",
+				"I just need to link my Brother HL-8 Printer to the new desktop I bought from you guys.",
+				"It was released in 1987 and there seems to be no drivers for my operation sytem. The last known version",
+				"I can find could be linked to OpenSolaris. So again, super easy call and although you haven't introduced",
+				"yourself yet I know you are the representative for me! I even know what you could try! I need you to",
+				"contact Brother for a converter piece for whatever-this-goes-to to USB-C! I think that is what my desktop",
+				"takes, I know my phone definitely has it. You should have my desktop in your system so you can figure it",
+				"out. Wouldn't it be cool though to print from my phone?! Anyways, then I need you to code a driver so",
+				"that the printer can receive my messages! Last and probably least, if you can just build me a sleek",
+				"interface to print double sided and on photo paper. I've never been able to do it so I figure it's 2020,",
+				"why not start! Let's get to it! Oh by the way, I got lucky enough to be chosen to be your quality",
+				"assurance so it's pretty easy money on your end! You probably have my number on caller ID, so have a good one!"
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"Brother HL8",
+					"Nicest way to say no",
+					"What is quality assurance",
+					"Can a qa fire me"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex": 5
+		},
+		{
+			"Scenarios": [
+				"Hey, this is....well to be honest, it's none of your gosh darn business...ya, hear?",
+				"I'm sick of your high polluting, rag-tag group of vandals trying to spy on me, YA HEAR?",
+				"What type of operation are you running here for your MISTER Putin, huh?",
+				"That's the problem with you offshoots of Jimmy Carter!",
+				"I REMEMBER RONALD REAGAN!",
+				"He wouldn't stand around making kissy shacks for these BULLIES!",
+				"I MEAN which Beatle am I talking to right now? All you need is love, huh?",
+				"Well how about..",
+				"*12 minutes later and I don't believe I've said a word*",
+				"Well ANYWAYS, since you're probably typing all this out for yer commie manfests, my boat isn't starting and my wife is angrier than all heck!",
+				"I was shredding my tax returns with my motor and I know somehow the socialist parts of it probably broke it, help me fix this?"
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"Can you power reset a boat",
+					"Why do boomers love reagan",
+					"Ronald reagan cowboy photos",
+					"Requirements for US president"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex":6
+		},
+		{
+			"Scenarios": [
+				"Listen up! I'm calling for help and not judgment!",
+				"I bought a TV from ya'll and my kids pulled a prank on me and hooked some device that plays this video",
+				"of R.Kelly holding a really long note on some singing show. I can not turn it off either.",
+				"It's been 4 months and I have nothing left to lose. Truth is, I have fallen into an abyss where I know",
+				"longer feel pain. I. Just. Want. To. Watch. Fishing. With. Jared. Faulker. one last time before I eat this television."
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"Is RKelly okay to search at work",
+					"How to delete internet history",
+					"The voice memes",
+					"How to rig a video on tv"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex":9
+		},
+		{
+			"Scenarios": [
+				"Hi! Oh gosh! How do I begin? I'm a little bit scared right now!",
+				"I'm sitting on quite the pickle and I really really hope you can help!",
+				"So, like, I'm a wedding photographer on the weekends and I just took photos for the most gorgeous wedding!",
+				"They were a couple that fell in love after the husband was flying his drone around his neighborhood and somehow his drone",
+				"landed in the bushes near her bathroom window! This world is so small! So, like, funnily enough",
+				"a couple years later and it's almost like I fell into a Disney storybook! His drone fell in",
+				"the bushes near my sorority's bathroom windows! The theme was probably the most relevant thing.",
+				"Live! Laugh! Love! I mean who knew those words would land so perfectly together.",
+				"UGH! He would make such a fun face to at the wedding L M A O he would like....",
+				"press his chin to his chest, look up and breathe really loudily! Funny!",
+				"So anyways, I got a virus and it says if I don't pay $80,000, this girl who died at senior prom",
+				"400 yrs ago is going to eat my files!!! Can I like write her a nice letter to lower that price a bit?"
+			],
+			"MiniGameOptions": {
+				"MiniGamePrompts": [
+					"How much are drones",
+					"Can you can arrested for drones",
+					"Why am I like this",
+					"How to write ransomware"
+				],
+				"LetterSpeed": 1.0,
+				"MaxLetterSpeed": 8.0,
+				"ScoreThreshold": 10,
+				"MinLetterSpawn": 1.0,
+				"MaxLetterSpawn": 2.0
+			},
+			"FacePlateIndex":10
+		}
+	]
 }

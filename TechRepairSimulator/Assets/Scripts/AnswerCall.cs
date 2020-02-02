@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Narrate;
+using UnityEngine.UI;
 
 public class AnswerCall : MonoBehaviour
 {
     public AudioClip callStarted;
     Narration narration = new Narration();
-    JsonDialog scenarios = new JsonDialog();
     public bool answered = false;
     void Start()
     {
-        var jsonPath = Resources.Load<TextAsset>("Dialog/dialog");
-        scenarios = JsonUtility.FromJson<JsonDialog>(jsonPath.text);
-        CreateNarration();
     }
 
     void OnMouseDown()
@@ -21,7 +18,6 @@ public class AnswerCall : MonoBehaviour
         if (!answered)
         {
             answered = true;
-            Debug.Log("Call Answered - Scene Transition Needed");
             AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
             audiosource.clip = callStarted;
             GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Incoming", false);
@@ -31,22 +27,19 @@ public class AnswerCall : MonoBehaviour
         }
     }
 
-    void CreateNarration()
+    public void CreateNarration(string[] scenarioPhrases)
     {
         List<Phrase> phrases = new List<Phrase>();
 
-        for (int i = 0; i < scenarios.Scenarios.Length; i++)
+        for (int i = 0; i < scenarioPhrases.Length; i++)
         {
             Phrase phrase = new Phrase();
-            if (scenarios.Scenarios[i].Contains("**PRESS"))
-            {
-                phrase.text = scenarios.Scenarios[i];
-                phrases.Add(phrase);
-                break;
-            }
-            phrase.text = scenarios.Scenarios[i];
+            phrase.text = scenarioPhrases[i];
             phrases.Add(phrase);
         }
+        Phrase endPhrase = new Phrase();
+        endPhrase.text = "**PRESS THE HOLD BUTTON TO PROCEED**";
+        phrases.Add(endPhrase);
 
         narration.phrases = phrases.ToArray();
     }
