@@ -18,14 +18,17 @@ public class AnswerCall : MonoBehaviour
 
     void OnMouseDown()
     {
-        answered = true;
-        Debug.Log("Call Answered - Scene Transition Needed");
-        AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
-        audiosource.clip = callStarted;
-        GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Incoming", false);
-        GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Hold", true);
-        NarrationManager.instance.PlayNarration(narration);
-        audiosource.Play();
+        if (!answered)
+        {
+            answered = true;
+            Debug.Log("Call Answered - Scene Transition Needed");
+            AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
+            audiosource.clip = callStarted;
+            GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Incoming", false);
+            GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Hold", true);
+            NarrationManager.instance.PlayNarration(narration);
+            audiosource.Play();
+        }
     }
 
     void CreateNarration()

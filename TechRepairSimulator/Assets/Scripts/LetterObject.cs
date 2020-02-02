@@ -41,7 +41,7 @@ public class LetterObject : MonoBehaviour
     {
         if(TargetWithinBounds && LetterState == LetterState.NEUTRAL)
         {
-            if (Input.GetKeyDown(Letter.ToString()))
+            if (Input.GetKeyDown(Letter.ToString().ToLower()))
             {
                 HandleHit();
             }
