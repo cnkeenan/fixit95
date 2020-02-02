@@ -121,15 +121,8 @@ public class GameController : MonoBehaviour
                     SceneManager.LoadScene("Game Results_BAD");
                     return;
                 }
-
-                //do something with the score
                 Destroy(MiniGameLoader.gameObject);
-                //get next scenario;
             }
-            //callPad = Instantiate(callPadPrefab);
-            //callIndicator = Instantiate(callIndicatorPrefab);
-            //callIndicator.name = "Indicator";
-            //callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
 
             CallPadIndicator = Instantiate(CallPadIndicatorPrefab);
             CallPadIndicator.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);

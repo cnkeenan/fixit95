@@ -55,10 +55,6 @@ public class TextLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.CapsLock))
-        {
-            SceneManager.LoadScene("SC01");
-        }
         TimeLeft -= Time.deltaTime;
         if(TimeLeft <= 0.0f && SendIt < Prompt.Count)
         {
