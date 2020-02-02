@@ -12,7 +12,7 @@
 			],
 			"MiniGameOptions": {
 				"MiniGamePrompts": [
-					"Bonzi buddy still exists",
+					"Does bonzi buddy still exists",
 					"Fake credit card numbers",
 					"Bad input hr dont fire me",
 					"Why do old people use tech"
@@ -60,7 +60,7 @@
 			"Scenarios": [
 				"Okay so! This is going to be a super easy call! My name is Jared Valentine, and",
 				"I just need to link my Brother HL-8 Printer to the new desktop I bought from you guys.",
-				"It was released in 1987 and there seems to be no drivers for my operation sytem. The last known version",
+				"It was released in 1987 and there seems to be no drivers for my operation system. The last known version",
 				"I can find could be linked to OpenSolaris. So again, super easy call and although you haven't introduced",
 				"yourself yet I know you are the representative for me! I even know what you could try! I need you to",
 				"contact Brother for a converter piece for whatever-this-goes-to to USB-C! I think that is what my desktop",
@@ -104,8 +104,8 @@
 			"MiniGameOptions": {
 				"MiniGamePrompts": [
 					"Can you power reset a boat",
-					"Why do boomers love reagan",
-					"Ronald reagan cowboy photos",
+					"Do boaters love Reagan",
+					"Ronald Reagan cowboy photos",
 					"Requirements for US president"
 				],
 				"LetterSpeed": 6.0,
@@ -159,7 +159,7 @@
 			"MiniGameOptions": {
 				"MiniGamePrompts": [
 					"How much are drones",
-					"Can you can arrested for drones",
+					"Can you get arrested for drones",
 					"Why am I like this",
 					"How to write ransomware"
 				],
