@@ -131,6 +131,12 @@ public class GameController : MonoBehaviour
         {
             Narrate.NarrationManager.instance.GetComponent<AudioSource>().clip = mainMenu;
             Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
+
+            if(MiniGameLoader != null)
+            {
+                CurrentMinigameIndex = 0;
+                Destroy(MiniGameLoader.gameObject);
+            }
         }
         else if (scene.name == "Game Results_BAD")
         {
