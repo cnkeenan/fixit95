@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     private float timeToWait = 1;
+    public AudioClip startSound;
+    private Coroutine play;
 
+    void OnMouseDown()
+    {
+        if (play == null)
+        {
+            play = StartCoroutine(PlayAudioAndAnimate());
+            SceneManager.LoadScene("SC01");
+        }
+    }
 
-    void OnMouseDown() {
+    IEnumerator PlayAudioAndAnimate()
+    {
         gameObject.GetComponent<Animator>().SetBool("Pressed", true);
-
-        /*float timeWaited = 0;
-
-        while (timeWaited < timeToWait) {
-            timeWaited += Time.deltaTime;
-        }*/
-
-        SceneManager.LoadScene("SC01");
-
-        
+        GameObject.Find("Ratty").GetComponent<Animator>().SetBool("Alert", true);
+        AudioSource.PlayClipAtPoint(startSound, transform.position);
+        yield return new WaitForSeconds(1);
     }
 }

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &113860636083937550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 113860636083937544}
+  - component: {fileID: 113860636083937551}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &113860636083937544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113860636083937550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.275, y: 2.07, z: -6.78666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113860636083937551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113860636083937550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d23ea7ced71848835cb951f1724fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upperBound: 9
+  clickSound: {fileID: 8300000, guid: 5072c0fc82a74af48b3514868dc3b7a1, type: 3}
+  mainMenu: {fileID: 8300000, guid: b25b6ac3ccaabbb4db4f332228f33344, type: 3}
+  waitingForCall: {fileID: 8300000, guid: da3e66037521cd944b8e5fc217d6920d, type: 3}
+  ratty: {fileID: 2105398282853677030, guid: 97381ab9ae415644984db45ccea26ea6, type: 3}
+  callIndicatorPrefab: {fileID: 897786224902808302, guid: bdb72f482245e9f4e91f55fc1f0b83fb,
+    type: 3}
+  callPadPrefab: {fileID: 334898212296827917, guid: f5ec2116b4d089241b1cac77c00c29c2,
+    type: 3}
+  previousNameplate: {fileID: 0}
+  faceplates: []
+  TextLoaderPrefab: {fileID: 7231936744151786555, guid: d98f93c190a59df45a7fe4a2973ed2d8,
+    type: 3}
+  LetterPrefab: {fileID: 7240082551078225237, guid: 33d95f1fc0ecd42c3b959ae44e19e9cc,
+    type: 3}
+  MovingPrefab: {fileID: -7192809880973999218, guid: 41db24121ee6f79488f42412b99c2523,
+    type: 3}
+  StartPosition: {x: -6, y: 2, z: -5}
+  FlyingStart: {x: -6, y: -10, z: -5}
+  MiniGameScenarioOptions: []
+  CurrentMinigameIndex: 0
+  GameOver: {fileID: 7448674405777744940, guid: 6360ce6f363cfad40b9e2719c2360286,
+    type: 3}

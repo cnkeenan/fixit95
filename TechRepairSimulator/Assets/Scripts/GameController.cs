@@ -27,11 +27,15 @@ public class ScenarioOptions
 
 public class GameController : MonoBehaviour
 {
-    public GameObject _call;
     private static GameController _instance;
 
     public float upperBound;
     public static bool wasCreated;
+
+    public AudioClip clickSound;
+    public AudioClip mainMenu;
+    public AudioClip waitingForCall;
+    public GameObject ratty;
 
     GameObject callIndicator;
     GameObject callPad;
@@ -53,7 +57,7 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        if(_instance != null && _instance != this)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
             return;
@@ -65,7 +69,7 @@ public class GameController : MonoBehaviour
         var jsonPath = Resources.Load<TextAsset>("Dialog/dialog");
         MiniGameScenarioOptions = JsonHelper.FromJson<ScenarioOptions>(jsonPath.text);
 
-        foreach(ScenarioOptions option in MiniGameScenarioOptions)
+        foreach (ScenarioOptions option in MiniGameScenarioOptions)
         {
             option.Clips = Resources.LoadAll<AudioClip>(option.ClipSource);
         }
@@ -73,6 +77,11 @@ public class GameController : MonoBehaviour
         faceplates = Resources.LoadAll<Sprite>("Sprites/Faceplates-Sheet");
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnMouseDown()
+    {
+        AudioSource.PlayClipAtPoint(clickSound, transform.position);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -85,9 +94,13 @@ public class GameController : MonoBehaviour
             MiniGameLoader.MovingPrefab = MovingPrefab;
             MiniGameLoader.StartPosition = StartPosition;
             MiniGameLoader.FlyingStart = FlyingStart;
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().loop = true;
         }
         else if (scene.name == "SC01")
         {
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().clip = waitingForCall;
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
             if (MiniGameLoader != null)
             {
                 if (MiniGameLoader.CurrentScore < 0)
@@ -114,6 +127,11 @@ public class GameController : MonoBehaviour
             callIndicator.name = "Indicator";
             callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
         }
+        else if (scene.name == "MainMenu")
+        {
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().clip = mainMenu;
+            Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
+        }
         else if (scene.name == "Game Results_BAD")
         {
             GameOver = FindObjectOfType<GameOver>();
@@ -123,7 +141,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        
+
         wasCreated = false;
     }
 

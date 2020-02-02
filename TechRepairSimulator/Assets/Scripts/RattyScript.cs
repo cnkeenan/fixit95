@@ -6,6 +6,7 @@ public class RattyScript : MonoBehaviour
 {
     Animator anim;
     private Coroutine wait;
+    public AudioClip rattySqueak;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -35,7 +36,7 @@ public class RattyScript : MonoBehaviour
             wait = null;
             yield break;
         }
-
+        
        
     }
 }

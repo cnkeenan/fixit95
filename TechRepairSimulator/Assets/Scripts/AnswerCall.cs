@@ -24,6 +24,9 @@ public class AnswerCall : MonoBehaviour
             GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Hold", true);
             NarrationManager.instance.PlayNarration(narration);
             audiosource.Play();
+            AudioSource.PlayClipAtPoint(callStarted, transform.position);
+            GameObject source = GameObject.Find("One shot audio");
+            source.GetComponent<AudioSource>().loop = true;
         }
     }
 
