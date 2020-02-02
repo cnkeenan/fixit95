@@ -7,8 +7,10 @@ public class OnAudioLoad : MonoBehaviour
     public AudioClip miniGameMusic;
     void Awake()
     {
-        Narrate.NarrationManager.instance.GetComponent<AudioSource>().clip = miniGameMusic;
-        Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
+        AudioSource AudioSource = Narrate.NarrationManager.instance.GetComponent<AudioSource>();
+        AudioSource.clip = miniGameMusic;
+        AudioSource.volume = 0.3f;
+        AudioSource.Play();
     }
 
     // Start is called before the first frame update

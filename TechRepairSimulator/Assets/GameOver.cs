@@ -10,6 +10,8 @@ public class GameOver : MonoBehaviour
     public float speed = 1;
     public Image gameOverPanel;
 
+    public Image window;
+
     private RectTransform rect;
 
     [SerializeField]
@@ -29,13 +31,16 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        rect = gameObject.GetComponent<Image>().rectTransform;
-        rect.localScale = new Vector2(0,0);
-        ExecuteGameOver();
+        var blah = window.GetComponent<Image>();
+        //rect = blah.rectTransform;
+        //rect.localScale = new Vector2(0,0);
+        //ExecuteGameOver();
     }
 
     public void ExecuteGameOver( bool lose = true)
     {
+        rect = window.rectTransform;
+
         if (lose)
         {
             message = loseMessage;

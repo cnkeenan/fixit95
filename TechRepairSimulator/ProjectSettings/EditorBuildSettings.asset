@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SC02.unity
     guid: 22ccb19e8b81fe543aea5fc78e277754
+  - enabled: 1
+    path: Assets/Scenes/Game Results_BAD.unity
+    guid: 0fe88ac9e3d6e0c40bee3bfbfc4b59fb
   m_configObjects: {}

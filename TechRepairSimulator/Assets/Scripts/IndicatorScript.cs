@@ -47,7 +47,6 @@ public class IndicatorScript : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         timer += Time.deltaTime;
-        Debug.Log(callWaitTime);
         if (timer > callWaitTime)
         {
             AudioSource.PlayClipAtPoint(missedCall, transform.position);
