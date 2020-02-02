@@ -22,7 +22,7 @@ public class IndicatorScript : MonoBehaviour
     }
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = transform.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame

@@ -17,11 +17,12 @@ public class AnswerCall : MonoBehaviour
     {
         if (!answered)
         {
-            answered = true;
+            
             AudioSource audiosource = NarrationManager.instance.GetComponent<AudioSource>();
             audiosource.clip = callStarted;
-            GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Incoming", false);
-            GameObject.Find("Indicator").GetComponent<Animator>().SetBool("Hold", true);
+
+            
+
             NarrationManager.instance.PlayNarration(narration);
             audiosource.Play();
             AudioSource.PlayClipAtPoint(callStarted, transform.position);

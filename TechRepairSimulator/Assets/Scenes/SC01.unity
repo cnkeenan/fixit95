@@ -154,6 +154,9 @@ MonoBehaviour:
   mainMenu: {fileID: 0}
   waitingForCall: {fileID: 0}
   ratty: {fileID: 0}
+  CallPadIndicatorPrefab: {fileID: 7232588464907952205, guid: 3ee1beff2ca9ce043a526f4dfc292153,
+    type: 3}
+  CallPadIndicator: {fileID: 0}
   callIndicatorPrefab: {fileID: 897786224902808302, guid: bdb72f482245e9f4e91f55fc1f0b83fb,
     type: 3}
   callPadPrefab: {fileID: 334898212296827917, guid: f5ec2116b4d089241b1cac77c00c29c2,

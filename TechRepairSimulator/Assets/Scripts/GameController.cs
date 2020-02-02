@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Narrate;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,6 +37,9 @@ public class GameController : MonoBehaviour
     public AudioClip mainMenu;
     public AudioClip waitingForCall;
     public GameObject ratty;
+
+    public GameObject CallPadIndicatorPrefab;
+    public GameObject CallPadIndicator;
 
     GameObject callIndicator;
     GameObject callPad;
@@ -122,10 +126,13 @@ public class GameController : MonoBehaviour
                 Destroy(MiniGameLoader.gameObject);
                 //get next scenario;
             }
-            callPad = Instantiate(callPadPrefab);
-            callIndicator = Instantiate(callIndicatorPrefab);
-            callIndicator.name = "Indicator";
-            callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
+            //callPad = Instantiate(callPadPrefab);
+            //callIndicator = Instantiate(callIndicatorPrefab);
+            //callIndicator.name = "Indicator";
+            //callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
+
+            CallPadIndicator = Instantiate(CallPadIndicatorPrefab);
+            CallPadIndicator.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
         }
         else if (scene.name == "MainMenu")
         {
@@ -154,25 +161,31 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (callIndicator)
+        if (CallPadIndicator)
         {
+            if(NarrationManager.instance.isPlaying)
+            {
+                CallPadIndicator.GetComponentInChildren<Animator>().SetBool("Incoming", false);
+                CallPadIndicator.GetComponentInChildren<Animator>().SetBool("Hold", true);
+                CallPadIndicator.GetComponent<AnswerCall>().answered = true;
+            }
             var facePlate = GameObject.FindGameObjectWithTag("SpeakerFacePlate");
             if (facePlate != null)
             {
                 facePlate.GetComponent<Image>().sprite = faceplates[MiniGameScenarioOptions[CurrentMinigameIndex].FacePlateIndex];
             }
 
-            if (callPad.GetComponent<AnswerCall>().answered)
+            if (CallPadIndicator.GetComponent<AnswerCall>().answered)
             {
-                callIndicator.GetComponent<IndicatorScript>().onHold = true;
+                CallPadIndicator.GetComponent<IndicatorScript>().onHold = true;
                 GameObject diagBox = GameObject.FindGameObjectWithTag("DialogBox");
-                if (diagBox != null && diagBox.activeSelf)
+                if (NarrationManager.instance.isPlaying)
                 {
-                    callIndicator.GetComponent<TransitionToMinigame>().locked = true;
+                    CallPadIndicator.GetComponent<TransitionToMinigame>().locked = true;
                 }
                 else
                 {
-                    callIndicator.GetComponent<TransitionToMinigame>().locked = false;
+                    CallPadIndicator.GetComponent<TransitionToMinigame>().locked = false;
                 }
             }
         }

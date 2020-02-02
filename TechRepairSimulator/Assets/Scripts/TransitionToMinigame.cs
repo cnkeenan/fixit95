@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TransitionToMinigame : MonoBehaviour
 {
-    public bool locked;
+    public bool locked = true;
     void OnMouseDown()
     {
-        var anim = GetComponent<Animator>();
+        var anim = GetComponentInChildren<Animator>();
 
         if (anim.GetBool("Hold") && !locked)
         {
