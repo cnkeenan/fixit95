@@ -1419,6 +1419,12 @@ PrefabInstance:
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 8300000, guid: b25b6ac3ccaabbb4db4f332228f33344, type: 3}
+    - target: {fileID: 113860636083937551, guid: f5ad2912817803346a0eda171a798dc9,
+        type: 3}
+      propertyPath: CallPadIndicatorPrefab
+      value: 
+      objectReference: {fileID: 7232588464907952205, guid: 3ee1beff2ca9ce043a526f4dfc292153,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5ad2912817803346a0eda171a798dc9, type: 3}
 --- !u!1 &1752114652
