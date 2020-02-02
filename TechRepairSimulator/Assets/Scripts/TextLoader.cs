@@ -10,10 +10,6 @@ public class TextLoader : MonoBehaviour
     private static TextLoader _instance;
     public LetterObject LetterPrefab;
     public MovingLetter MovingPrefab;
-    //private static string[] TestStrings = new string[]
-    //    {
-    //        "hp printer model 2501 jammed",
-    //    };
     List<LetterObject> Prompt = new List<LetterObject>();
     List<MovingLetter> Flyers = new List<MovingLetter>();
     public Vector3 StartPosition;
@@ -25,10 +21,6 @@ public class TextLoader : MonoBehaviour
     private int CurrentPrompt = 0;
     public float CurrentScore = 0;
     private float ScoreMultiplier = 1.0f;
-    //public float ScoreThreshold;
-    //public float MinLetterSpawn;
-    //public float MaxLetterSpawn;
-    //public string[] MiniGamePrompts;
     public TextLoaderOptions options;
     private void Awake()
     {

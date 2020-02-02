@@ -47,11 +47,11 @@
 					"Is silk road still around",
 					"Chinese food near me"
 				],
-				"LetterSpeed": 1.0,
-				"MaxLetterSpeed": 8.0,
-				"ScoreThreshold": 10,
-				"MinLetterSpawn": 1.0,
-				"MaxLetterSpawn": 2.0
+				"LetterSpeed": 2.0,
+				"MaxLetterSpeed": 12.0,
+				"ScoreThreshold": 20,
+				"MinLetterSpawn": 0.8,
+				"MaxLetterSpawn": 1.5
 			},
 			"FacePlateIndex":3,
 			"ClipSource": "Audio/Creep"
@@ -78,10 +78,10 @@
 					"What is quality assurance",
 					"Can a qa fire me"
 				],
-				"LetterSpeed": 1.0,
-				"MaxLetterSpeed": 8.0,
-				"ScoreThreshold": 10,
-				"MinLetterSpawn": 1.0,
+				"LetterSpeed": 4.0,
+				"MaxLetterSpeed": 16.0,
+				"ScoreThreshold": 40,
+				"MinLetterSpawn": 0.8,
 				"MaxLetterSpawn": 2.0
 			},
 			"FacePlateIndex": 5,
@@ -108,11 +108,11 @@
 					"Ronald reagan cowboy photos",
 					"Requirements for US president"
 				],
-				"LetterSpeed": 1.0,
-				"MaxLetterSpeed": 8.0,
-				"ScoreThreshold": 10,
-				"MinLetterSpawn": 1.0,
-				"MaxLetterSpawn": 2.0
+				"LetterSpeed": 6.0,
+				"MaxLetterSpeed": 16.0,
+				"ScoreThreshold": 60,
+				"MinLetterSpawn": 0.5,
+				"MaxLetterSpawn": 1.5
 			},
 			"FacePlateIndex":6,
 			"ClipSource": "Audio/Reagan"
@@ -132,10 +132,10 @@
 					"The voice memes",
 					"How to rig a video on tv"
 				],
-				"LetterSpeed": 1.0,
-				"MaxLetterSpeed": 8.0,
-				"ScoreThreshold": 10,
-				"MinLetterSpawn": 1.0,
+				"LetterSpeed": 8.0,
+				"MaxLetterSpeed": 16.0,
+				"ScoreThreshold": 80,
+				"MinLetterSpawn": 0.5,
 				"MaxLetterSpawn": 2.0
 			},
 			"FacePlateIndex":9,
@@ -163,11 +163,11 @@
 					"Why am I like this",
 					"How to write ransomware"
 				],
-				"LetterSpeed": 1.0,
-				"MaxLetterSpeed": 8.0,
-				"ScoreThreshold": 10,
-				"MinLetterSpawn": 1.0,
-				"MaxLetterSpawn": 2.0
+				"LetterSpeed": 10.0,
+				"MaxLetterSpeed": 16.0,
+				"ScoreThreshold": 100,
+				"MinLetterSpawn": 0.5,
+				"MaxLetterSpawn": 3.0
 			},
 			"FacePlateIndex":10,
 			"ClipSource": "Audio/Wedding"

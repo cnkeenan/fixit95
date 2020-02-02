@@ -44,10 +44,12 @@ public class LetterObject : MonoBehaviour
         {
             if (Input.GetKeyDown(Letter.ToString().ToLower()))
             {
+                Debug.Log($"Hit: {Letter}");
                 HandleHit();
             }
             else if (Input.anyKeyDown)
             {
+                Debug.Log($"Wrong: {Letter}");
                 HandleMiss();
             }
         }
@@ -65,8 +67,8 @@ public class LetterObject : MonoBehaviour
     public void HandleHit()
     {
         Shrink();
-        Destroy(Target.gameObject);
         LetterState = LetterState.HIT;
+        Destroy(Target.gameObject);
         SpriteRenderer.material.color = new Color(0.0f, 1.0f, 0.0f);
         AudioSource.PlayClipAtPoint(AudioSuccess, transform.position, 1.0f);
     }
@@ -74,8 +76,8 @@ public class LetterObject : MonoBehaviour
     public void HandleMiss()
     {
         Shrink();
-        Destroy(Target.gameObject);
         LetterState = LetterState.MISSED;
+        Destroy(Target.gameObject);
         SpriteRenderer.material.color = new Color(1.0f, 0.0f, 0.0f);
         AudioSource.PlayClipAtPoint(AudioFailed, transform.position, 1.0f);
     }
@@ -91,9 +93,10 @@ public class LetterObject : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
+        if (LetterState == LetterState.NEUTRAL && other.gameObject == Target.gameObject)
         {
             TargetWithinBounds = false;
+            Debug.Log($"Exit Miss: {Letter}");
             HandleMiss();
         }
     }

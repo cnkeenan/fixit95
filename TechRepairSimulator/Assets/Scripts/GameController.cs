@@ -103,7 +103,7 @@ public class GameController : MonoBehaviour
             Narrate.NarrationManager.instance.GetComponent<AudioSource>().Play();
             if (MiniGameLoader != null)
             {
-                if (MiniGameLoader.CurrentScore < 0)
+                if (MiniGameLoader.CurrentScore < MiniGameLoader.options.ScoreThreshold)
                 {
                     Lost = true;
                     SceneManager.LoadScene("Game Results_BAD");
