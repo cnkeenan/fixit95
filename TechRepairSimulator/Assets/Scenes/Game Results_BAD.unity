@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77aa95c7c7043f84b8e1e707dc6fcf3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 1291.1
   gameOverPanel: {fileID: 872118356}
   window: {fileID: 1632802520}
   message: Congratulations "Enter Employee Name Here",  You've hit our monthly quota
