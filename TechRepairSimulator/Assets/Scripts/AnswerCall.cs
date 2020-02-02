@@ -27,7 +27,7 @@ public class AnswerCall : MonoBehaviour
         }
     }
 
-    public void CreateNarration(string[] scenarioPhrases)
+    public void CreateNarration(string[] scenarioPhrases, AudioClip[] clips)
     {
         List<Phrase> phrases = new List<Phrase>();
 
@@ -35,6 +35,7 @@ public class AnswerCall : MonoBehaviour
         {
             Phrase phrase = new Phrase();
             phrase.text = scenarioPhrases[i];
+            phrase.audio = clips[i];
             phrases.Add(phrase);
         }
         Phrase endPhrase = new Phrase();

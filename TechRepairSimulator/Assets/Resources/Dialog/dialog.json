@@ -6,7 +6,7 @@
 				"Did you know bananas help you lose weight by smelling them instead of eating them!",
 				"He said that! Never in my 82 yrs did I know that!",
 				"Anyways, I think he's being a bad little monkey right now and I need help reprimanding the youngster.",
-				"I can't work myself up to do it bec6ause he's my little buddy. He keeps making me click different parts",
+				"I can't work myself up to do it because he's my little buddy. He keeps making me click different parts",
 				"of his body and wants my credit card! I don't even have a credit card.",
 				"Do you think I should just put some random numbers so I can get some more facts"
 			],
@@ -23,7 +23,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex":0
+			"FacePlateIndex":0,
+			"ClipSource": "Audio/Buddy"
 		},
 		{
 			"Scenarios": [
@@ -52,7 +53,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex":3
+			"FacePlateIndex":3,
+			"ClipSource": "Audio/Creep"
 		},
 		{
 			"Scenarios": [
@@ -82,7 +84,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex": 5
+			"FacePlateIndex": 5,
+			"ClipSource": "Audio/Printer"
 		},
 		{
 			"Scenarios": [
@@ -111,7 +114,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex":6
+			"FacePlateIndex":6,
+			"ClipSource": "Audio/Reagan"
 		},
 		{
 			"Scenarios": [
@@ -134,7 +138,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex":9
+			"FacePlateIndex":9,
+			"ClipSource": "Audio/RKelly"
 		},
 		{
 			"Scenarios": [
@@ -164,7 +169,8 @@
 				"MinLetterSpawn": 1.0,
 				"MaxLetterSpawn": 2.0
 			},
-			"FacePlateIndex":10
+			"FacePlateIndex":10,
+			"ClipSource": "Audio/Wedding"
 		}
 	]
 }

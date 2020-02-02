@@ -21,6 +21,8 @@ public class ScenarioOptions
     public string[] Scenarios;
     public TextLoaderOptions MiniGameOptions;
     public int FacePlateIndex;
+    public string ClipSource;
+    public AudioClip[] Clips;
 }
 
 public class GameController : MonoBehaviour
@@ -30,8 +32,6 @@ public class GameController : MonoBehaviour
 
     public float upperBound;
     public static bool wasCreated;
-    public int completedCalls = 0;
-    public int failedCalls = 0;
 
     GameObject callIndicator;
     GameObject callPad;
@@ -64,6 +64,11 @@ public class GameController : MonoBehaviour
 
         var jsonPath = Resources.Load<TextAsset>("Dialog/dialog");
         MiniGameScenarioOptions = JsonHelper.FromJson<ScenarioOptions>(jsonPath.text);
+
+        foreach(ScenarioOptions option in MiniGameScenarioOptions)
+        {
+            option.Clips = Resources.LoadAll<AudioClip>(option.ClipSource);
+        }
 
         faceplates = Resources.LoadAll<Sprite>("Sprites/Faceplates-Sheet");
 
@@ -107,7 +112,7 @@ public class GameController : MonoBehaviour
             callPad = Instantiate(callPadPrefab);
             callIndicator = Instantiate(callIndicatorPrefab);
             callIndicator.name = "Indicator";
-            callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios);
+            callPad.GetComponent<AnswerCall>().CreateNarration(MiniGameScenarioOptions[CurrentMinigameIndex].Scenarios, MiniGameScenarioOptions[CurrentMinigameIndex].Clips);
         }
         else if (scene.name == "Game Results_BAD")
         {
@@ -130,14 +135,7 @@ public class GameController : MonoBehaviour
             var facePlate = GameObject.FindGameObjectWithTag("SpeakerFacePlate");
             if (facePlate != null)
             {
-                Debug.Log(MiniGameScenarioOptions[CurrentMinigameIndex].FacePlateIndex);
-                Debug.Log(faceplates[MiniGameScenarioOptions[CurrentMinigameIndex].FacePlateIndex].name);
                 facePlate.GetComponent<Image>().sprite = faceplates[MiniGameScenarioOptions[CurrentMinigameIndex].FacePlateIndex];
-            }
-            if (callIndicator.GetComponent<IndicatorScript>().callFailed > 0)
-            {
-                failedCalls++;
-                callIndicator.GetComponent<IndicatorScript>().callFailed--;
             }
 
             if (callPad.GetComponent<AnswerCall>().answered)
