@@ -1,1 +1,1 @@
-![](fitit.png=300x150)
+![](fitit.png =300x150)
