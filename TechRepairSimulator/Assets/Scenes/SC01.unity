@@ -149,8 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2d23ea7ced71848835cb951f1724fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _call: {fileID: 9055194033499018581, guid: 58387bda42c1fb5478345934225fb941, type: 3}
   upperBound: 9
+  clickSound: {fileID: 0}
+  mainMenu: {fileID: 0}
+  waitingForCall: {fileID: 0}
+  ratty: {fileID: 0}
   callIndicatorPrefab: {fileID: 897786224902808302, guid: bdb72f482245e9f4e91f55fc1f0b83fb,
     type: 3}
   callPadPrefab: {fileID: 334898212296827917, guid: f5ec2116b4d089241b1cac77c00c29c2,
@@ -290,6 +293,10 @@ PrefabInstance:
     - target: {fileID: 11464564, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 3}
       propertyPath: queueLength
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11491702, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22416264, guid: 81bc1efb6a09c7a468f85500c18ef233, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -566,17 +573,17 @@ PrefabInstance:
     - target: {fileID: 2105398282853677030, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.089
+      value: 4.1124
       objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.054
+      value: 2.4564
       objectReference: {fileID: 0}
     - target: {fileID: 2105398282853677051, guid: 97381ab9ae415644984db45ccea26ea6,
         type: 3}
