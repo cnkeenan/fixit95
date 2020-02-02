@@ -1,1 +1,1 @@
-![](fitit.png =300x150)
+<img src="fitit.png" width="300" height="150">
