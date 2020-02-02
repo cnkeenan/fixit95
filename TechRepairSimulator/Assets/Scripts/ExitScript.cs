@@ -5,6 +5,8 @@ using UnityEngine;
 public class ExitScript : MonoBehaviour
 {
     void OnMouseDown() {
-        Application.Quit();
+            gameObject.GetComponent<Animator>().SetBool("Pressed", true);
+
+            Application.Quit();
     }
 }
