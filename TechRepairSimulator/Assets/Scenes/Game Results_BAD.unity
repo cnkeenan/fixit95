@@ -434,7 +434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.79
-  m_Text: "Dear Employee,\n\n\n\n\n\n\n\t\t\t\t\t\t\tLove,\n\t\t\t\t\t\t\tDenis"
+  m_Text: 
 --- !u!222 &748684004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 90d5ecae52f3378408bfa1c53450b259, type: 3}
     m_FontSize: 21
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please come to my office to discuss your pathetic performance!
+  m_Text: 
 --- !u!222 &870675344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -830,8 +830,26 @@ MonoBehaviour:
   speed: 12
   gameOverPanel: {fileID: 872118356}
   window: {fileID: 1632802520}
-  message: Please come to my office to discuss your pathetic performance!
-  loseMessage: Please come to my office to discuss your pathetic performance!
+  message: Congratulations "Enter Employee Name Here",  You've hit our monthly quota
+    for your call station. As noted before by Drew Broom ("Human" Relations), this
+    month's winner will receive a complimentary toaster. Please coordinate the pick
+    up with last month's toaster winner, Felix Leap. You can either pick it up from
+    his house or he can bring it. Formally, we don't have an opinion either way. You
+    may join us in the rice throwing for the employee dragout of your competition,
+    Daniel Burnes. Keep in mind, you've set an standard and standards breed expectation.
+    Good luck going forward.  Congratulations, Chad Cochran
+  loseMessage: 'Good afternoon Employee #533,  This e-mail is to inform as to the
+    reason as to why you are probably outside  unraveling your pile of cords. First,
+    we''d like to formally thank Frank Salchitas (Finance Director) and Dave Morrilk
+    (Office Assistant) for our ceremonial drag-out of our recently terminated employees.
+    You are always there when we need you. We are writing you today to inform you
+    that your employment with FixIt has  ended today or, rather, two weeks ago per
+    payroll.  This decision is not reversible. You will receive an honorary pack of
+    post cards with our company logos as compensation. The payment for these postcards
+    have been removed silently from the last three paychecks you''ve received. Keep
+    in mind, you signed a confidentiality policy with our company which we will remind
+    you of from time-to-time via phone calls or physical visits.  Anyways peace out,
+    Chad Cochran'
   winMessage: 'Hey Great Job!
 
     (no raise tho)'
