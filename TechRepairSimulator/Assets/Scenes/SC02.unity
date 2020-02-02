@@ -407,45 +407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGameMusic: {fileID: 8300000, guid: 9e11853d1346f164eb07478846917c86, type: 3}
---- !u!1 &650688267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 650688269}
-  - component: {fileID: 650688268}
-  m_Layer: 0
-  m_Name: AudioListener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &650688268
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650688267}
-  m_Enabled: 1
---- !u!4 &650688269
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650688267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5132592, y: 1.7408118, z: -5.1643248}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1082080755
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,60 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37577caa9d707a4fb22a1405cea0d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1159474050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1159474052}
-  - component: {fileID: 1159474051}
-  m_Layer: 0
-  m_Name: TextLoader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1159474051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159474050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10682b91e89514598bff7a15648d30f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LetterPrefab: {fileID: 7240082551078225237, guid: 33d95f1fc0ecd42c3b959ae44e19e9cc,
-    type: 3}
-  MovingPrefab: {fileID: -7192809880973999218, guid: 41db24121ee6f79488f42412b99c2523,
-    type: 3}
-  StartPosition: {x: -6, y: 2, z: -5}
-  FlyingStart: {x: -6, y: -5, z: -5}
-  LetterSpeed: 1
-  CurrentScore: 0
-  ScoreThreshold: 0
-  MinLetterSpawn: 1
-  MaxLetterSpawn: 2
---- !u!4 &1159474052
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159474050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.17404109, y: 0.44062275, z: -2.633791}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1323049635
 GameObject:
   m_ObjectHideFlags: 0

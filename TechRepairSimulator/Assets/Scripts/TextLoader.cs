@@ -7,15 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class TextLoader : MonoBehaviour
 {
+    private static TextLoader _instance;
     public LetterObject LetterPrefab;
     public MovingLetter MovingPrefab;
-    private static string[] TestStrings = new string[]
-        {
-            "how to fix hp printer",
-            "jobs near me that dont suck",
-            "hp printer model 2501 jammed",
-            "please better jobs near me"
-        };
+    //private static string[] TestStrings = new string[]
+    //    {
+    //        "hp printer model 2501 jammed",
+    //    };
     List<LetterObject> Prompt = new List<LetterObject>();
     List<MovingLetter> Flyers = new List<MovingLetter>();
     public Vector3 StartPosition;
@@ -27,11 +25,18 @@ public class TextLoader : MonoBehaviour
     private int CurrentPrompt = 0;
     public float CurrentScore = 0;
     private float ScoreMultiplier = 1.0f;
-    public float ScoreThreshold;
-    public float MinLetterSpawn;
-    public float MaxLetterSpawn;
+    //public float ScoreThreshold;
+    //public float MinLetterSpawn;
+    //public float MaxLetterSpawn;
+    //public string[] MiniGamePrompts;
+    public TextLoaderOptions options;
     private void Awake()
     {
+        if (_instance != null)
+        {
+            Destroy(this.gameObject);
+        }
+        _instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -50,6 +55,7 @@ public class TextLoader : MonoBehaviour
             int keyIndex = indexOfUnderscore+1;
             CharacterSprites[spriteName[keyIndex]] = sprite;
         }
+        LetterSpeed = options.LetterSpeed;
         LoadPrompt();
         
     }
@@ -62,7 +68,7 @@ public class TextLoader : MonoBehaviour
         {
             Flyers[SendIt].StartMoving(LetterSpeed);
             SendIt++;
-            TimeLeft = UnityEngine.Random.Range(MinLetterSpawn, MaxLetterSpawn);
+            TimeLeft = UnityEngine.Random.Range(options.MinLetterSpawn, options.MaxLetterSpawn);
         }
 
         if(Prompt.Count > 0 && Prompt[Prompt.Count - 1].LetterState != LetterState.NEUTRAL)
@@ -71,7 +77,7 @@ public class TextLoader : MonoBehaviour
             CurrentPrompt++; 
 
 
-            if (CurrentPrompt < TestStrings.Length)
+            if (CurrentPrompt < options.MiniGamePrompts.Length)
             {
                 LoadPrompt();
             }
@@ -128,7 +134,7 @@ public class TextLoader : MonoBehaviour
     {
         Vector3 Position = StartPosition;
         Vector3 flyerPosition = FlyingStart;
-        foreach (char Character in TestStrings[CurrentPrompt])
+        foreach (char Character in options.MiniGamePrompts[CurrentPrompt])
         {
             float xIncrement = 0.2f;
 
