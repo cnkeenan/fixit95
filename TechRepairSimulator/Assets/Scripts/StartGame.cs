@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 public class StartGame : MonoBehaviour
 {
     void OnMouseDown() {
+        gameObject.GetComponent<Animator>().SetBool("Pressed", true);
+
         SceneManager.LoadScene("SC01");
 
-        gameObject.GetComponent<Animator>().SetBool( "Pressed" , true);
+        
     }
 }
