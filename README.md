@@ -1,1 +1,1 @@
-<img src="fitit.png" width="600" height="150">
+<img src="fitit-lanczos3.png">
