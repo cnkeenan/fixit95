@@ -1,2 +1,2 @@
 # FixIt95 
-### An tech support simulation experience
+### A tech support simulation experience
