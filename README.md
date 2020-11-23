@@ -34,5 +34,6 @@ You must correctly type the right letters in all 6 scenarios.
 * [Armand Karambasis](https://github.com/JJ-Karambasis)
 * Christopher DeJesus
 * [Alex Marsh](https://github.com/marshy2346)
-* Emil Lopez
+* [Emil Lopez](https://github.com/JadeEmperor400)
+
 
