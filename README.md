@@ -8,6 +8,11 @@
 
 ---
 
+## Play it here!
+[Click here to play!](https://jadeemperor400.github.io/FixIt95/)
+
+---
+
 
 ## Welcome to your new role with FixIt Industries™
 _The year is 1995. The tech industry is booming, but nobody really seems to understand it. FixIt Industries™ has created the first contact center for Tech Support to handle this. As an employee of FixIt Industries, you are tasked with repairing, fixing, and resolving all of our customers issues with their various technologies. We expect nothing less than the best!_
